@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/create-book','BookController@create');
 
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
